@@ -29,7 +29,6 @@ export default function Home() {
               >
                 View Projects
               </a>
-
               <a
                 href="#contact"
                 className="inline-flex items-center px-6 py-3 border border-slate-600 hover:border-slate-500 rounded-md font-medium transition-all hover:bg-slate-800/30"
@@ -42,7 +41,7 @@ export default function Home() {
       </section>
 
       {/* STATS */}
-      <section className="py-20 bg-slate-900 border-t border-slate-800">
+      <section className="py-20 border-t border-slate-800">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div className="bg-gray-800/50 p-6 rounded-lg border-l-4 border-primary">
@@ -68,26 +67,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROJECTS (placeholder for now) */}
-      <section id="projects" className="py-20 bg-slate-900 border-t border-slate-800">
+      {/* PROJECTS placeholder */}
+      <section id="projects" className="py-20 border-t border-slate-800">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
             RACE TRACK PROJECTS
           </h2>
           <p className="text-center text-slate-400">
-            Next step: we’ll convert your SVG track + animated car into a client component.
+            Next: we’ll add your track + animated car section as a client component.
           </p>
         </div>
       </section>
 
-      {/* CONTACT (placeholder for now) */}
-      <section id="contact" className="py-20 bg-slate-900 border-t border-slate-800">
+      {/* CONTACT placeholder */}
+      <section id="contact" className="py-20 border-t border-slate-800">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
             PIT RADIO
           </h2>
           <p className="text-center text-slate-400">
-            Next step: convert your contact form section.
+            Next: we’ll convert your contact form section.
           </p>
         </div>
       </section>
