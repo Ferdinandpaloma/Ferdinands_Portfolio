@@ -1,86 +1,27 @@
-"use client";
+import type { Metadata } from "next";
+import "./globals.css";
 
-import { useState } from "react";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import CarCursor from "@/components/CarCursor";
 
-export default function Navbar() {
-  const [open, setOpen] = useState(false);
+export const metadata: Metadata = {
+  title: "FastLane Portfolio | F1-Inspired Developer Showcase",
+  description:
+    "High-performance code at racing speed. Checkered flag quality with pit-stop efficiency.",
+};
 
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <header
-      className="
-        fixed top-0 left-0 right-0 z-[1000]
-        bg-slate-900/95 backdrop-blur
-        border-b border-white/5
-        shadow-[0_4px_30px_rgba(0,0,0,0.10)]
-      "
-    >
-      <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-8 py-6">
-        {/* Logo */}
-        <Link
-          href="/"
-          className="flex items-center text-[1.8rem] font-bold tracking-[-0.5px] text-white"
-          onClick={() => setOpen(false)}
-        >
-          FAST<span className="ml-1 text-primary">LANE</span>
-        </Link>
-
-        {/* Mobile button */}
-        <button
-          type="button"
-          className="md:hidden text-white"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span className="text-3xl leading-none">{open ? "×" : "≡"}</span>
-        </button>
-
-        {/* Links (Desktop + Mobile) */}
-        <div
-          className={[
-            "flex gap-10",
-            "md:static md:flex-row md:items-center",
-            "max-md:fixed max-md:left-0 max-md:right-0 max-md:top-[70px]",
-            "max-md:flex-col max-md:items-center max-md:gap-6 max-md:py-8",
-            "max-md:bg-slate-800/95 max-md:backdrop-blur",
-            open ? "max-md:block" : "max-md:hidden",
-          ].join(" ")}
-        >
-          <Link
-            href="/"
-            className="text-[1.05rem] font-medium text-white/80 hover:text-white transition"
-            onClick={() => setOpen(false)}
-          >
-            Home
-          </Link>
-
-          <Link
-            href="/projects"
-            className="text-[1.05rem] font-medium text-white/80 hover:text-white transition"
-            onClick={() => setOpen(false)}
-          >
-            Projects
-          </Link>
-
-          <a
-            href="#skills"
-            className="text-[1.05rem] font-medium text-white/80 hover:text-white transition"
-            onClick={() => setOpen(false)}
-          >
-            Skills
-          </a>
-
-          <a
-            href="#contact"
-            className="text-[1.05rem] font-medium text-white/80 hover:text-white transition"
-            onClick={() => setOpen(false)}
-          >
-            Contact
-          </a>
-        </div>
-      </nav>
-    </header>
+    <html lang="en" className="scroll-smooth">
+      <body className="bg-slate-900 text-slate-100 antialiased">
+        <Navbar />
+        <CarCursor />
+        <main className="pt-[88px]">{children}</main>
+      </body>
+    </html>
   );
 }

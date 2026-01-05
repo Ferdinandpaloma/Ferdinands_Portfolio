@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import Navbar from "@/components/Navbar";
-import CarCursor from "@/components/CarCursor";
+import CarCursor from "../components/CarCursor";
 
 export const metadata: Metadata = {
   title: "FastLane Portfolio | F1-Inspired Developer Showcase",
