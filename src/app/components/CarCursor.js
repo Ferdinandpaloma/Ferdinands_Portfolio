@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 export default function CarCursor() {
-  const carRef = useRef<HTMLImageElement>(null);
+  const carRef = useRef(null);
 
   useEffect(() => {
     const car = carRef.current;
@@ -40,13 +40,13 @@ export default function CarCursor() {
       carHalfH = r.height / 2;
     };
 
-    const normalizeAngle = (a: number) => {
+    const normalizeAngle = (a) => {
       a = (a + Math.PI) % (Math.PI * 2);
       if (a < 0) a += Math.PI * 2;
       return a - Math.PI;
     };
 
-    const onMove = (e: PointerEvent) => {
+    const onMove = (e) => {
       tx = e.clientX;
       ty = e.clientY;
     };
