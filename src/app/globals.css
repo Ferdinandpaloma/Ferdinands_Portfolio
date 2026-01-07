@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Hide car cursor when hovering over project markers */
+body.hide-car-cursor img[alt="cursor car"],
+body.hide-car-cursor img[src="/car.png"] {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.2s ease-in-out;
+}
