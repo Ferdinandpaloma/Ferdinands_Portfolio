@@ -60,14 +60,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
-      {/* Made with DeepSite footer */}
-      <div className="fixed bottom-4 left-4 z-30 bg-slate-800/50 backdrop-blur-sm px-4 py-2 rounded-lg border border-slate-700">
-        <div className="flex items-center gap-2 text-sm text-slate-400">
-          <div className="w-4 h-4 bg-white rounded-sm"></div>
-          <span>Made with DeepSite</span>
-        </div>
-      </div>
 
       {/* STATS */}
       <section className="py-20 border-t border-slate-800">
