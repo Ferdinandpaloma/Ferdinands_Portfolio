@@ -26,26 +26,32 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           <Link
             href="/"
-            className="text-2xl font-bold text-red-500 hover:text-red-400 transition-colors"
+            className="text-2xl font-bold text-white hover:text-red-500 transition-colors"
           >
-            FastLane
+            FAST <span className="text-red-500">LANE</span>
           </Link>
           <div className="hidden md:flex space-x-8">
             <Link
-              href="#about"
-              className="text-slate-300 hover:text-white transition-colors"
+              href="/"
+              className="text-red-500 font-medium transition-colors"
             >
-              About
+              Home
             </Link>
             <Link
               href="#projects"
-              className="text-slate-300 hover:text-white transition-colors"
+              className="text-white hover:text-red-500 transition-colors"
             >
               Projects
             </Link>
             <Link
+              href="#skills"
+              className="text-white hover:text-red-500 transition-colors"
+            >
+              Skills
+            </Link>
+            <Link
               href="#contact"
-              className="text-slate-300 hover:text-white transition-colors"
+              className="text-white hover:text-red-500 transition-colors"
             >
               Contact
             </Link>
