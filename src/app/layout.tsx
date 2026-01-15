@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import CarCursor from "@/components/CarCursor";
 
 export const metadata: Metadata = {
-  title: "FastLane Portfolio | F1-Inspired Developer Showcase",
+  title: "Ferdinand Paloma's Portfolio",
   description:
     "High-performance code at racing speed. Checkered flag quality with pit-stop efficiency.",
 };

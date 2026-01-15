@@ -1,4 +1,5 @@
 import RacetrackProjects from "@/components/RacetrackProjects";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 text-white tracking-tight">
               <span className="block">
-                FAST <span className="text-red-500">LANE</span>
+                Ferdinand <span className="text-red-500">Paloma</span>
               </span>
             </h1>
 
@@ -91,17 +92,8 @@ export default function Home() {
       {/* PROJECTS */}
       <RacetrackProjects />
 
-      {/* CONTACT placeholder */}
-      <section id="contact" className="py-20 border-t border-slate-800">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-            PIT RADIO
-          </h2>
-          <p className="text-center text-slate-400">
-            Next: we’ll convert your contact form section.
-          </p>
-        </div>
-      </section>
+      {/* CONTACT */}
+      <ContactForm />
     </div>
   );
 }
