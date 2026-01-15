@@ -1,7 +1,4 @@
 import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
@@ -33,6 +30,10 @@ export async function POST(request: Request) {
         { status: 500 }
       );
     }
+
+    // Dynamically import Resend to avoid build-time errors
+    const { Resend } = await import('resend');
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     // Get recipient email from environment or use a default
     const recipientEmail = process.env.CONTACT_EMAIL || 'ferdinand.paloma@gmail.com';
