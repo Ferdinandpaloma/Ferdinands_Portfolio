@@ -85,6 +85,8 @@ export default function ContactForm() {
         body: JSON.stringify(formData),
       });
 
+      const result = await response.json();
+      
       if (response.ok) {
         setStatus({
           submitting: false,
@@ -104,7 +106,9 @@ export default function ContactForm() {
           setStatus((prev) => ({ ...prev, success: false, message: "" }));
         }, 5000);
       } else {
-        throw new Error("Failed to send message");
+        // Show actual error message from API
+        const errorMessage = result.error || "Failed to send message";
+        throw new Error(errorMessage);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -112,7 +116,7 @@ export default function ContactForm() {
         submitting: false,
         success: false,
         error: true,
-        message: "Failed to send message. Please try again or contact me directly.",
+        message: error.message || "Failed to send message. Please try again or contact me directly.",
       });
     }
   };
@@ -354,7 +358,7 @@ export default function ContactForm() {
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <a
-                href="mailto:contact@example.com"
+                href="mailto:ferdinand.paloma@gmail.com"
                 className="text-slate-300 hover:text-red-400 transition-colors flex items-center gap-2"
               >
                 <svg
