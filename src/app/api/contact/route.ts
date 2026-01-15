@@ -35,8 +35,8 @@ export async function POST(request: Request) {
     }
 
     // Get recipient email from environment or use a default
-    const recipientEmail = process.env.CONTACT_EMAIL || 'fpaloma.buisness@gmail.com';
-    const fromEmail = process.env.RESEND_FROM_EMAIL || 'fpaloma.buisness@gmail.com';
+    const recipientEmail = process.env.CONTACT_EMAIL || 'ferdinand.paloma@gmail.com';
+    const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
@@ -161,8 +161,10 @@ ${message}
 
     if (error) {
       console.error('Resend error:', error);
+      // Return more specific error message
+      const errorMessage = error.message || 'Failed to send email';
       return NextResponse.json(
-        { error: 'Failed to send email' },
+        { error: errorMessage },
         { status: 500 }
       );
     }
