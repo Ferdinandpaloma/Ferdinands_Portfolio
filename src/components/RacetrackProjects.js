@@ -10,41 +10,44 @@ const projectMarkers = [
     id: 1,
     x: 20,
     y: 79,
-    title: "E-Commerce Platform",
-    image: null, // Add image URL here when available
+    title: "Mental-Health-Insight-Engine",
+    image: "/MentalHealth.jpg",
     description: "A full-stack e-commerce solution built with React and Node.js. Features include user authentication, payment processing, inventory management, and real-time order tracking. Optimized for performance with server-side rendering and lazy loading.",
     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    link: "https://github.com/example/ecommerce",
+    link: "https://github.com/Ferdinandpaloma/Mental-Health-Insight-Engine",
   },
   {
     id: 2,
     x: 55,
     y: 15,
-    title: "Task Management App",
-    image: null, // Add image URL here when available
-    description: "A collaborative task management application with real-time updates using WebSockets. Includes drag-and-drop functionality, team collaboration features, and detailed analytics dashboards. Built with modern UI/UX principles for optimal user experience.",
-    technologies: ["Vue.js", "Express", "PostgreSQL", "Socket.io"],
-    link: "https://github.com/example/taskmanager",
+    title: "Pantry Planner",
+    image: "/PantryPlanner.png",
+    description: "A user-centric web application designed to make meal planning seamless, efficient, and personalized. Built during Irvine Hacks 2025. Features include user authentication, cuisine preferences, cooking goals, recipe explorer with Spoonacular API integration, and AI-powered cooking advice using Groq API. Fully responsive design with modern UI/UX.",
+    technologies: ["React", "Vite", "Firebase", "Node.js", "Spoonacular API", "Groq API", "Bootstrap"],
+    link: "https://github.com/BrentMatthewOrtizo/PantryPlanner",
+    devpostLink: "https://devpost.com/software/smart-chef",
   },
   {
     id: 3,
     x: 80,
     y: 45,
-    title: "Weather Dashboard",
-    image: null, // Add image URL here when available
-    description: "A responsive weather dashboard that displays real-time weather data and forecasts. Integrates with multiple weather APIs, includes interactive maps, and provides detailed meteorological information. Features a beautiful, intuitive interface built with React.",
-    technologies: ["React", "TypeScript", "Chart.js", "OpenWeather API"],
-    link: "https://github.com/example/weather",
+    title: "URLinks",
+    image: "/URLinks.png",
+    description: "A cybersecurity awareness platform designed to teach internet users about malicious websites and social engineering. Features interactive cybersecurity lessons and a live URL scanner powered by Google's WebRisk API that instantly verifies if any link is safe, phishing, malicious, or associated with unwanted software. Built during PantherHacks 2025.",
+    technologies: ["HTML", "JavaScript", "Bootstrap CSS", "Firebase", "Firestore", "Google WebRisk API", "Geo.ipify API", "Vercel"],
+    link: "https://github.com/Ferdinandpaloma/URLinks",
+    devpostLink: "https://devpost.com/software/urlinks",
   },
   {
     id: 4,
     x: 50,
     y: 80,
-    title: "Social Media Analytics",
-    image: null, // Add image URL here when available
-    description: "An analytics platform for social media metrics with data visualization. Tracks engagement rates, follower growth, and content performance across multiple platforms. Includes automated reporting and predictive analytics features.",
-    technologies: ["Next.js", "Python", "D3.js", "TensorFlow"],
-    link: "https://github.com/example/social-analytics",
+    title: "SplitSphere",
+    image: "/Splitsphere.png",
+    description: "A modern web application for tracking and splitting group expenses with real-time synchronization. Features smart settlement calculations that minimize transaction count (95% accuracy improvement), interactive expense analytics with charts, Stripe payment integration, and Firebase-powered real-time updates. Supports groups of 2-10 members with instant synchronization across all devices.",
+    technologies: ["React", "Vite", "Firebase", "Firestore", "Stripe", "Recharts", "React Router"],
+    link: "https://github.com/Ferdinandpaloma/Splitsphere",
+    demoLink: "https://splitsphere.vercel.app/",
   },
   {
     id: 5,
@@ -248,7 +251,33 @@ export default function RacetrackProjects() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-600 rounded-md font-medium transition-all hover:shadow-lg hover:shadow-red-500/50 hover:scale-105 active:scale-95"
                   >
-                    <span>View Project</span>
+                    <span>View on GitHub</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                )}
+                {selectedProject.devpostLink && (
+                  <a
+                    href={selectedProject.devpostLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-md font-medium transition-all hover:shadow-lg hover:shadow-blue-500/50 hover:scale-105 active:scale-95"
+                  >
+                    <span>View on Devpost</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                )}
+                {selectedProject.demoLink && (
+                  <a
+                    href={selectedProject.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 rounded-md font-medium transition-all hover:shadow-lg hover:shadow-green-500/50 hover:scale-105 active:scale-95"
+                  >
+                    <span>Live Demo</span>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
