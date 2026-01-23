@@ -53,9 +53,9 @@ const projectMarkers = [
     id: 5,
     x: 15,
     y: 50,
-    title: "Fitness Tracker",
+    title: "Fitness Tracker (In Progress)",
     image: null, // Add image URL here when available
-    description: "A comprehensive fitness tracking application with workout planning, progress monitoring, and nutrition tracking. Features include personalized workout recommendations, progress charts, and integration with wearable devices.",
+    description: "A comprehensive fitness tracking application currently in development. Planned features include workout planning, progress monitoring, and nutrition tracking. Will include personalized workout recommendations, progress charts, and integration with wearable devices.",
     technologies: ["React Native", "Firebase", "GraphQL", "HealthKit"],
     link: "https://github.com/example/fitness-tracker",
   },
