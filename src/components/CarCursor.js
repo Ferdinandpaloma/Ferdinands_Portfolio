@@ -115,7 +115,7 @@ export default function CarCursor() {
       ref={carRef}
       src="/car.png"
       alt="cursor car"
-      className="fixed top-0 left-0 w-[80px] pointer-events-none z-[9999]"
+      className="fixed top-0 left-0 w-[56px] pointer-events-none z-[9999]"
       style={{
         transformOrigin: "50% 50%",
         willChange: "transform",

@@ -353,9 +353,6 @@ export default function ContactForm() {
 
           {/* Alternative Contact Info */}
           <div className="mt-12 pt-8 border-t border-slate-800">
-            <p className="text-center text-slate-400 mb-4">
-              Prefer to reach out directly?
-            </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <a
                 href="mailto:ferdinand.paloma@gmail.com"
@@ -377,7 +374,7 @@ export default function ContactForm() {
                 Email me
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/ferdinandpaloma/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-300 hover:text-red-400 transition-colors flex items-center gap-2"

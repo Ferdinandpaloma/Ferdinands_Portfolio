@@ -119,7 +119,7 @@ class CustomFooter extends HTMLElement {
           <div class="footer-social">
             <a href="#" class="social-icon"><i data-feather="github"></i></a>
             <a href="#" class="social-icon"><i data-feather="twitter"></i></a>
-            <a href="#" class="social-icon"><i data-feather="linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/ferdinandpaloma/" target="_blank" rel="noopener noreferrer" class="social-icon"><i data-feather="linkedin"></i></a>
             <a href="#" class="social-icon"><i data-feather="instagram"></i></a>
           </div>
         </div>

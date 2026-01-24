@@ -8,8 +8,8 @@ import Image from "next/image";
 const projectMarkers = [
   {
     id: 1,
-    x: 20,
-    y: 79,
+    x: 60,
+    y: 70,
     title: "Mental-Health-Insight-Engine",
     image: "/MentalHealth.jpg",
     description: "A full-stack e-commerce solution built with React and Node.js. Features include user authentication, payment processing, inventory management, and real-time order tracking. Optimized for performance with server-side rendering and lazy loading.",
@@ -17,9 +17,9 @@ const projectMarkers = [
     link: "https://github.com/Ferdinandpaloma/Mental-Health-Insight-Engine",
   },
   {
-    id: 2,
-    x: 55,
-    y: 15,
+    id: 4,
+    x: 70,
+    y: 47,
     title: "Pantry Planner",
     image: "/PantryPlanner.png",
     description: "A user-centric web application designed to make meal planning seamless, efficient, and personalized. Built during Irvine Hacks 2025. Features include user authentication, cuisine preferences, cooking goals, recipe explorer with Spoonacular API integration, and AI-powered cooking advice using Groq API. Fully responsive design with modern UI/UX.",
@@ -28,9 +28,9 @@ const projectMarkers = [
     devpostLink: "https://devpost.com/software/smart-chef",
   },
   {
-    id: 3,
-    x: 80,
-    y: 45,
+    id: 2,
+    x: 9,
+    y: 41,
     title: "URLinks",
     image: "/URLinks.png",
     description: "A cybersecurity awareness platform designed to teach internet users about malicious websites and social engineering. Features interactive cybersecurity lessons and a live URL scanner powered by Google's WebRisk API that instantly verifies if any link is safe, phishing, malicious, or associated with unwanted software. Built during PantherHacks 2025.",
@@ -39,9 +39,9 @@ const projectMarkers = [
     devpostLink: "https://devpost.com/software/urlinks",
   },
   {
-    id: 4,
-    x: 50,
-    y: 80,
+    id: 3,
+    x: 40,
+    y: 57,
     title: "SplitSphere",
     image: "/Splitsphere.png",
     description: "A modern web application for tracking and splitting group expenses with real-time synchronization. Features smart settlement calculations that minimize transaction count (95% accuracy improvement), interactive expense analytics with charts, Stripe payment integration, and Firebase-powered real-time updates. Supports groups of 2-10 members with instant synchronization across all devices.",
@@ -51,8 +51,8 @@ const projectMarkers = [
   },
   {
     id: 5,
-    x: 15,
-    y: 50,
+    x: 90,
+    y: 60,
     title: "Fitness Tracker (In Progress)",
     image: null, // Add image URL here when available
     description: "A comprehensive fitness tracking application currently in development. Planned features include workout planning, progress monitoring, and nutrition tracking. Will include personalized workout recommendations, progress charts, and integration with wearable devices.",
@@ -82,7 +82,7 @@ export default function RacetrackProjects() {
     <section id="projects" className="py-20 border-t border-slate-800 relative">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          RACE TRACK <span className="text-red-500">PROJECTS</span>
+           <span className="text-red-500">PROJECTS</span>
         </h2>
         <p className="text-center text-slate-400 mb-12 max-w-2xl mx-auto">
           Navigate the track to discover my projects at each turn
@@ -136,13 +136,28 @@ export default function RacetrackProjects() {
                     {/* Inner highlight */}
                     <div className="absolute inset-1 rounded-full bg-gradient-to-br from-red-300/50 to-transparent" />
                     
-                    {/* Center dot */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-white" />
+                    {/* Click me icon - flag */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 text-white pointer-events-none">
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="drop-shadow-sm">
+                        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                        <line x1="4" y1="22" x2="4" y2="15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                      </svg>
+                    </div>
                   </div>
                   
                   {/* Number badge */}
                   <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-white border-2 border-red-500 flex items-center justify-center text-xs font-bold text-red-600 shadow-lg">
                     {project.id}
+                  </div>
+                  
+                  {/* Click me label - always visible below marker with pulsing animation */}
+                  <div className="absolute top-full left-1/2 mt-2 flex items-center gap-1 px-2 py-1 rounded-md bg-slate-800/90 border border-slate-600 text-[10px] md:text-xs font-medium text-slate-300 whitespace-nowrap opacity-80 group-hover:opacity-100 group-hover:text-white group-hover:border-red-500/50 transition-all animate-pulse-scale">
+                    <svg className="w-3 h-3 md:w-3.5 md:h-3.5 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    Click me
                   </div>
                 </div>
                 
@@ -150,6 +165,7 @@ export default function RacetrackProjects() {
                 <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none transform group-hover:-translate-y-1">
                   <div className="bg-slate-800 border border-red-500/50 rounded-lg px-4 py-2 text-sm text-white shadow-2xl whitespace-nowrap">
                     <div className="font-semibold text-red-400">{project.title}</div>
+                    <div className="text-xs text-slate-400 mt-0.5">Click to view details</div>
                     <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-slate-800" />
                   </div>
                 </div>

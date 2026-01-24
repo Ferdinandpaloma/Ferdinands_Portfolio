@@ -28,7 +28,7 @@ export default function Navbar() {
             href="/"
             className="text-2xl font-bold text-white hover:text-red-500 transition-colors"
           >
-            FAST <span className="text-red-500">LANE</span>
+            Ferdinand <span className="text-red-500">Paloma</span>
           </Link>
           <div className="hidden md:flex space-x-8">
             <Link
