@@ -141,33 +141,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STATS */}
-      <section className="py-20 border-t border-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div className="bg-gray-800/50 p-6 rounded-lg border-l-4 border-red-500">
-              <div className="text-4xl font-bold text-red-500 mb-2">42+</div>
-              <div className="text-gray-400">Projects</div>
-            </div>
-
-            <div className="bg-gray-800/50 p-6 rounded-lg border-l-4 border-green-400">
-              <div className="text-4xl font-bold text-green-400 mb-2">10k+</div>
-              <div className="text-gray-400">Code Hours</div>
-            </div>
-
-            <div className="bg-gray-800/50 p-6 rounded-lg border-l-4 border-red-500">
-              <div className="text-4xl font-bold text-red-500 mb-2">99%</div>
-              <div className="text-gray-400">Success Rate</div>
-            </div>
-
-            <div className="bg-gray-800/50 p-6 rounded-lg border-l-4 border-green-400">
-              <div className="text-4xl font-bold text-green-400 mb-2">1.9s</div>
-              <div className="text-gray-400">Fastest Load</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* PROJECTS */}
       <RacetrackProjects />
 

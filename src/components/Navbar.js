@@ -44,12 +44,6 @@ export default function Navbar() {
               Projects
             </Link>
             <Link
-              href="#skills"
-              className="text-white hover:text-red-500 transition-colors"
-            >
-              Skills
-            </Link>
-            <Link
               href="#contact"
               className="text-white hover:text-red-500 transition-colors"
             >
